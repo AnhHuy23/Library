@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1050.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.newui.IssuedBooksController">
+    <children>
+        <VBox prefHeight="700.0" prefWidth="1050.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+            <HBox prefHeight="51.0" prefWidth="200.0" styleClass="top-main" stylesheets="@color_3.css">
+               <children>
+                  <JFXButton fx:id="quitButton" onAction="#quitHandle" prefHeight="51.0" prefWidth="60.0" text=" ">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="ARROW_LEFT" size="42" />
+                     </graphic>
+                  </JFXButton>
+                      <Label alignment="CENTER" prefHeight="51.0" prefWidth="990.0" styleClass="top-main" stylesheets="@color_3.css" text="ISSUED BOOKS" textFill="WHITE">
+                          <font>
+                              <Font name="System Bold" size="28.0" />
+                          </font>
+                          <graphic>
+                              <FontAwesomeIconView fill="WHITE" glyphName="LIST_ALT" size="40" />
+                          </graphic>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                      </Label>
+               </children>
+            </HBox>
+                <HBox prefHeight="62.0" prefWidth="1050.0">
+                    <children>
+                        <Label prefHeight="62.0" prefWidth="131.0" text="Search ID:">
+                            <graphic>
+                                <FontAwesomeIconView glyphName="SEARCH" size="35" />
+                            </graphic>
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="bookIdTextField" prefHeight="40.0" prefWidth="150.0" promptText="enter ID">
+                            <HBox.margin>
+                                <Insets top="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                </HBox>
+                <TableView fx:id="tableView" prefHeight="570.0" prefWidth="1010.0">
+                    <columns>
+                        <TableColumn fx:id="serialNumber" prefWidth="202.0" text="Stt" />
+                        <TableColumn fx:id="bookId" prefWidth="202.0" text="Book ID" />
+                        <TableColumn fx:id="title" prefWidth="202.0" text="Title" />
+                        <TableColumn fx:id="author" prefWidth="202.0" text="Author" />
+                        <TableColumn fx:id="issueTo" prefWidth="202.0" text="Issue to" />
+                    </columns>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </VBox.margin>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="470.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.newui.EditUserController">
+    <children>
+        <VBox prefHeight="700.0" prefWidth="1050.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <Label alignment="CENTER" prefHeight="50.0" prefWidth="900.0" styleClass="top-main" stylesheets="@color.css" text="EDIT USER" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="28.0" />
+                    </font>
+                    <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="PENCIL_SQUARE" size="40" />
+                    </graphic>
+                </Label>
+                <HBox prefHeight="62.0" prefWidth="1050.0">
+                    <children>
+                        <Label prefHeight="62.0" prefWidth="131.0" text="Enter ID User:">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="20.0" />
+                            </HBox.margin>
+                        </Label>
+                        <TextField fx:id="userIdField" prefHeight="40.0" prefWidth="150.0" promptText="enter ID">
+                            <HBox.margin>
+                                <Insets top="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="20.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="117.0" prefHeight="60.0" prefWidth="900.0">
+                    <children>
+                        <Label prefHeight="50.0" prefWidth="150.0" text="Name:">
+                            <HBox.margin>
+                                <Insets left="20.0" top="5.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                        </Label>
+                        <Text fx:id="nameText" strokeType="OUTSIDE" strokeWidth="0.0" text="..." textAlignment="CENTER" wrappingWidth="250.0">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets top="15.0" />
+                            </HBox.margin>
+                        </Text>
+                        <TextField fx:id="nameField" prefHeight="40.0" prefWidth="250.0">
+                            <HBox.margin>
+                                <Insets left="50.0" top="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="117.0" prefHeight="60.0" prefWidth="900.0">
+                    <children>
+                        <Label prefHeight="50.0" prefWidth="150.0" text="Mobile:">
+                            <HBox.margin>
+                                <Insets left="20.0" top="5.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                        </Label>
+                        <Text fx:id="mobileText" strokeType="OUTSIDE" strokeWidth="0.0" text="..." textAlignment="CENTER" wrappingWidth="250.0">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets top="15.0" />
+                            </HBox.margin>
+                        </Text>
+                        <TextField fx:id="mobileField" prefHeight="40.0" prefWidth="250.0">
+                            <HBox.margin>
+                                <Insets left="50.0" top="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox layoutX="10.0" layoutY="177.0" prefHeight="60.0" prefWidth="900.0">
+                    <children>
+                        <Label prefHeight="50.0" prefWidth="150.0" text="Email:">
+                            <HBox.margin>
+                                <Insets left="20.0" top="5.0" />
+                            </HBox.margin>
+                            <font>
+                                <Font name="System Bold" size="19.0" />
+                            </font>
+                        </Label>
+                        <Text fx:id="emailText" strokeType="OUTSIDE" strokeWidth="0.0" text="..." textAlignment="CENTER" wrappingWidth="250.0">
+                            <font>
+                                <Font size="20.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets top="15.0" />
+                            </HBox.margin>
+                        </Text>
+                        <TextField fx:id="emailField" prefHeight="40.0" prefWidth="250.0">
+                            <HBox.margin>
+                                <Insets left="50.0" top="10.0" />
+                            </HBox.margin>
+                        </TextField>
+                    </children>
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                </HBox>
+                <HBox prefHeight="100.0" prefWidth="200.0">
+                    <VBox.margin>
+                        <Insets top="15.0" />
+                    </VBox.margin>
+                    <children>
+                        <JFXButton fx:id="saveButton" onAction="#saveHandle" prefHeight="50.0" prefWidth="120.0" styleClass="main-button" stylesheets="@color.css" text="SAVE" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="270.0" right="10.0" top="20.0" />
+                            </HBox.margin>
+                        </JFXButton>
+                        <JFXButton fx:id="cancelButton" layoutX="10.0" layoutY="30.0" onAction="#cancelHandle" prefHeight="50.0" prefWidth="120.0" styleClass="main-button" stylesheets="@color.css" text="CANCEL" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="22.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="10.0" top="20.0" />
+                            </HBox.margin>
+                        </JFXButton>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+/* login */
+.text-field {
+    -fx-background-radius: 25; /* Góc bo viền */
+    -fx-border-radius: 25;     /* Góc bo viền */
+    -fx-border-color: #000;    /* Màu viền */
+    -fx-border-width: 2;       /* Độ rộng viền */
+}
+
+.login-button {
+    -fx-background-radius: 25; /* Góc bo viền */
+    -fx-border-radius: 25;     /* Góc bo viền */
+    -fx-border-width: 2;
+    -fx-background-color: linear-gradient(to right top, #21A691, #87DF2C);
+}
+.login-button:hover {
+    -fx-background-color: linear-gradient(to right top, rgba(33, 166, 145, 0.4), rgba(135, 223, 44, 0.4));
+}
+
+/* main window */
+.left-main {
+    -fx-background-color: rgb(32, 191, 107);
+}
+
+.left-button:hover {
+    -fx-background-color: rgb(38, 222, 129);
+}
+
+.top-main {
+    -fx-background-color: rgb(32, 191, 107);
+}

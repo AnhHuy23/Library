@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Sat Dec 07 00:02:17 GMT+07:00 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.17.1.0 - (1913217): instance a816c00e-0193-9cec-1218-00000f407028 
+on database directory C:\Users\PC\Documents\GitHub\Uet_opp_oasis-2024\database\library2 with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@799f7e29 
+Loaded from file:/C:/Users/PC/.m2/repository/org/apache/derby/derby/10.17.1.0/derby-10.17.1.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=23.0.1+11-39
+user.dir=C:\Users\PC\Documents\GitHub\Uet_opp_oasis-2024
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

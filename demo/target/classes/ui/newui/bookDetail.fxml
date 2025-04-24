@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="350.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.newui.BookDetailController">
+   <children>
+      <HBox prefHeight="350.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="350.0" prefWidth="200.0">
+               <children>
+                  <ImageView fx:id="imageView" fitHeight="270.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                     <VBox.margin>
+                        <Insets left="10.0" right="10.0" top="10.0" />
+                     </VBox.margin>
+                  </ImageView>
+                  <HBox prefHeight="70.0" prefWidth="200.0">
+                     <children>
+                        <JFXButton fx:id="addButton" onAction="#addHandle" prefHeight="40.0" prefWidth="70.0" styleClass="main-button" stylesheets="@color.css" text="ADD" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="25.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="cancelButton" layoutX="10.0" layoutY="10.0" onAction="#cancelHandle" prefHeight="40.0" prefWidth="70.0" styleClass="main-button" stylesheets="@color.css" text="CANCEL" textFill="WHITE">
+                           <HBox.margin>
+                              <Insets left="10.0" right="25.0" top="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="350.0" prefWidth="400.0">
+               <children>
+                  <HBox prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="44.0" text="Title: ">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" top="5.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Text fx:id="titleText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="333.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="9.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="30.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="65.0" text="Author:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Text fx:id="authorText" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="315.0">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="4.0" />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="77.0" text="ID:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="isbnTextField" prefHeight="30.0" prefWidth="200.0">
+                           <HBox.margin>
+                              <Insets left="20.0" top="4.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="35.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="29.0" prefWidth="77.0" text="Quantity:">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Label>
+                        <TextField fx:id="quantityTextField" prefHeight="30.0" prefWidth="200.0">
+                           <HBox.margin>
+                              <Insets left="20.0" top="4.0" />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="265.0" prefWidth="400.0">
+                     <children>
+                        <Label prefHeight="30.0" prefWidth="109.0" text="Description: ">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextArea fx:id="descriptionTextArea" prefHeight="180.0" prefWidth="400.0">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <Hyperlink fx:id="hyperLink" prefHeight="25.0" prefWidth="380.0" text="Hyperlink">
+                           <VBox.margin>
+                              <Insets left="10.0" />
+                           </VBox.margin>
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Hyperlink>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

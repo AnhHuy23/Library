@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: transparent;" stylesheets="@color.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.newui.LoginController">
+    <children>
+        <AnchorPane layoutX="318.0" layoutY="97.0" prefHeight="414.0" prefWidth="530.0" style="-fx-background-radius: 25; -fx-background-color: white;">
+            <children>
+            <VBox prefHeight="440.0" prefWidth="530.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="80.0" prefWidth="530.0" text="WELCOME">
+                     <font>
+                        <Font name="System Bold" size="31.0" />
+                     </font>
+                     <padding>
+                        <Insets left="25.0" top="30.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                  </Label>
+                  <Label prefHeight="48.0" prefWidth="530.0" text="Name:">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="90.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="adminNameField" prefHeight="50.0" prefWidth="390.0" promptText="Enter name" styleClass="text-field" stylesheets="@color_3.css">
+                     <VBox.margin>
+                        <Insets left="90.0" right="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="10.0" layoutY="110.0" prefHeight="48.0" prefWidth="530.0" text="Password:">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <padding>
+                        <Insets left="90.0" />
+                     </padding>
+                  </Label>
+                  <PasswordField fx:id="passwordField" prefHeight="50.0" prefWidth="390.0" promptText="Enter password" styleClass="text-field" stylesheets="@color_3.css">
+                     <VBox.margin>
+                        <Insets left="90.0" right="50.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </PasswordField>
+                      <JFXButton fx:id="loginButton" buttonType="RAISED" onAction="#handleLogin" prefHeight="54.0" prefWidth="390.0" styleClass="login-button" stylesheets="@color_3.css" text="LOGIN" textFill="WHITE">
+                     <VBox.margin>
+                        <Insets left="90.0" top="25.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </VBox>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="sideBar" layoutX="31.0" layoutY="53.0" prefHeight="500.0" prefWidth="320.0" style="-fx-background-radius: 25;" styleClass="colorBackground">
+            <children>
+            <VBox prefHeight="500.0" prefWidth="320.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                      <JFXButton onAction="#closeScene" prefHeight="45.0" prefWidth="50.0" text=" ">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="TIMES_CIRCLE" size="30" wrappingWidth="25.0" />
+                     </graphic>
+                     <VBox.margin>
+                        <Insets left="270.0" />
+                     </VBox.margin>
+                  </JFXButton>
+                  <FontAwesomeIconView fill="WHITE" glyphName="WINDOWS" size="130" textAlignment="CENTER" wrappingWidth="320.0">
+                     <VBox.margin>
+                        <Insets top="50.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <Label alignment="CENTER" prefHeight="100.0" prefWidth="320.0" text="LIBRARY ASSISTANT HVH_UET" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="17.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>

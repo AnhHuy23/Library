@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1050.0" style="-fx-background-color: transparent;" stylesheets="@color.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.newui.MainWindowController">
+   <children>
+      <HBox prefHeight="700.0" prefWidth="1050.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox prefHeight="700.0" prefWidth="241.0" styleClass="left-main" stylesheets="@color_3.css">
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER_CIRCLE" size="90" textAlignment="CENTER" wrappingWidth="240.0">
+                     <VBox.margin>
+                        <Insets top="30.0" />
+                     </VBox.margin>
+                  </FontAwesomeIconView>
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="240.0" text="WELCOME HOME, BOSS" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <JFXButton onAction="#handleSearchBook" prefHeight="85.0" prefWidth="240.0" styleClass="left-button" stylesheets="@color_3.css" text="Search book" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SEARCH" size="50" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="20.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets right="15.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="275.0" onAction="#handleManageBooks" prefHeight="85.0" prefWidth="240.0" styleClass="left-button" stylesheets="@color.css" text="Manage books" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="BOOK" size="50" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets left="15.0" />
+                     </padding>
+                  </JFXButton>
+                  <JFXButton layoutX="10.0" layoutY="200.0" onAction="#handleManageUsers" prefHeight="85.0" prefWidth="240.0" styleClass="left-button" stylesheets="@color.css" text="Manage users" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="USERS" size="45" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </JFXButton>
+                  <JFXButton fx:id="issuedBook" layoutX="10.0" layoutY="370.0" onAction="#handleIsuedBooks" prefHeight="85.0" prefWidth="240.0" styleClass="left-button" stylesheets="@color.css" text="Issued books" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="LIST_ALT" size="50" />
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="quitButton" layoutX="10.0" layoutY="350.0" onAction="#handleQuit" prefHeight="85.0" prefWidth="240.0" styleClass="left-button" stylesheets="@color.css" text="Sign out" textFill="WHITE">
+                     <graphic>
+                        <FontAwesomeIconView fill="WHITE" glyphName="SIGN_OUT" size="50" />
+                     </graphic>
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="85.0" />
+                     </VBox.margin>
+                  </JFXButton>
+               </children>
+            </VBox>
+            <VBox layoutX="10.0" layoutY="10.0" prefHeight="700.0" prefWidth="810.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="60.0" prefWidth="830.0" styleClass="top-main" text="&quot;Are you lonely? Don't worry. Every book is ready to be your friend!&quot;" textFill="WHITE">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <stylesheets>
+                        <URL value="@color.css" />
+                        <URL value="@color_3.css" />
+                     </stylesheets>
+                  </Label>
+                  <TabPane prefHeight="640.0" prefWidth="810.0" tabClosingPolicy="UNAVAILABLE">
+                    <tabs>
+                      <Tab text="         BOOK ISSUE         ">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox prefHeight="611.0" prefWidth="810.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <VBox prefHeight="250.0" prefWidth="810.0">
+                                             <VBox.margin>
+                                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                             </VBox.margin>
+                                             <children>
+                                                <VBox prefHeight="250.0" prefWidth="770.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="35.0" prefWidth="770.0" styleClass="top-main" text="BOOK INFORMATION" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <FontAwesomeIconView fill="WHITE" glyphName="FILE_TEXT" size="25" />
+                                                         </graphic>
+                                                      </Label>
+                                                      <HBox prefHeight="216.0" prefWidth="770.0" styleClass="color-bookissue" stylesheets="@color.css">
+                                                         <children>
+                                                            <TextField fx:id="bookIdTextField1" alignment="CENTER" prefHeight="44.0" prefWidth="119.0" promptText="Book ID">
+                                                               <HBox.margin>
+                                                                  <Insets bottom="86.0" left="30.0" right="30.0" top="86.0" />
+                                                               </HBox.margin>
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <VBox prefHeight="216.0" prefWidth="590.0">
+                                                               <children>
+                                                                  <HBox prefHeight="50.0" prefWidth="590.0">
+                                                                     <children>
+                                                                        <Label prefHeight="50.0" prefWidth="170.0" text="Book Name: ">
+                                                                           <font>
+                                                                              <Font size="18.0" />
+                                                                           </font>
+                                                                           <padding>
+                                                                              <Insets left="15.0" />
+                                                                           </padding>
+                                                                        </Label>
+                                                                        <Text fx:id="bookText" strokeType="OUTSIDE" strokeWidth="0.0" text="..." textAlignment="CENTER" wrappingWidth="420.0">
+                                                                           <HBox.margin>
+                                                                              <Insets top="13.0" />
+                                                                           </HBox.margin>
+                                                                           <font>
+                                                                              <Font size="17.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                     </children>
+                                                                     <VBox.margin>
+                                                                        <Insets top="33.0" />
+                                                                     </VBox.margin>
+                                                                  </HBox>
+                                                                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="590.0">
+                                                                     <children>
+                                                                        <Label prefHeight="50.0" prefWidth="170.0" text="Author:">
+                                                                           <font>
+                                                                              <Font size="18.0" />
+                                                                           </font>
+                                                                           <padding>
+                                                                              <Insets left="15.0" />
+                                                                           </padding>
+                                                                        </Label>
+                                                                        <Text fx:id="authorText" strokeType="OUTSIDE" strokeWidth="0.0" text="..." textAlignment="CENTER" wrappingWidth="420.0">
+                                                                           <HBox.margin>
+                                                                              <Insets top="13.0" />
+                                                                           </HBox.margin>
+                                                                           <font>
+                                                                              <Font size="17.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                     </children>
+                                                                  </HBox>
+                                                                  <HBox layoutX="10.0" layoutY="60.0" prefHeight="50.0" prefWidth="590.0">
+                                                                     <children>
+                                                                        <Label prefHeight="50.0" prefWidth="170.0" text="Quantity In Stock:">
+                                                                           <font>
+                                                                              <Font size="18.0" />
+                                                                           </font>
+                                                                           <padding>
+                                                                              <Insets left="15.0" />
+                                                                           </padding>
+                                                                        </Label>
+                                                                        <Text fx:id="quantityInStock" strokeType="OUTSIDE" strokeWidth="0.0" text="..." textAlignment="CENTER" wrappingWidth="420.0">
+                                                                           <HBox.margin>
+                                                                              <Insets top="13.0" />
+                                                                           </HBox.margin>
+                                                                           <font>
+                                                                              <Font size="17.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                     </children>
+                                                                     <VBox.margin>
+                                                                        <Insets bottom="33.0" />
+                                                                     </VBox.margin>
+                                                                  </HBox>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                          <VBox layoutX="30.0" layoutY="30.0" prefHeight="250.0" prefWidth="810.0">
+                                             <children>
+                                                <VBox prefHeight="250.0" prefWidth="770.0">
+                                                   <children>
+                                                      <Label alignment="CENTER" prefHeight="35.0" prefWidth="770.0" styleClass="top-main" text="USER INFORMATION" textFill="WHITE">
+                                                         <font>
+                                                            <Font size="15.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <FontAwesomeIconView fill="WHITE" glyphName="USER" size="25" />
+                                                         </graphic>
+                                                      </Label>
+                                                      <HBox prefHeight="216.0" prefWidth="770.0" styleClass="color-bookissue" stylesheets="@color.css">
+                                                         <children>
+                                                            <TextField fx:id="userIdTextField1" alignment="CENTER" prefHeight="44.0" prefWidth="119.0" promptText="User ID">
+                                                               <HBox.margin>
+                                                                  <Insets bottom="86.0" left="30.0" right="30.0" top="86.0" />
+                                                               </HBox.margin>
+                                                               <font>
+                                                                  <Font size="15.0" />
+                                                               </font>
+                                                            </TextField>
+                                                            <VBox prefHeight="216.0" prefWidth="590.0">
+                                                               <children>
+                                                                  <HBox prefHeight="50.0" prefWidth="590.0">
+                                                                     <children>
+                                                                        <Label prefHeight="50.0" prefWidth="170.0" text="Uer Name:">
+                                                                           <font>
+                                                                              <Font size="18.0" />
+                                                                           </font>
+                                                                           <padding>
+                                                                              <Insets left="15.0" />
+                                                                           </padding>
+                                                                        </Label>
+                                                                        <Text fx:id="userNameText" strokeType="OUTSIDE" strokeWidth="0.0" text="..." textAlignment="CENTER" wrappingWidth="420.0">
+                                                                           <HBox.margin>
+                                                                              <Insets top="13.0" />
+                                                                           </HBox.margin>
+                                                                           <font>
+                                                                              <Font size="17.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                     </children>
+                                                                     <VBox.margin>
+                                                                        <Insets top="33.0" />
+                                                                     </VBox.margin>
+                                                                  </HBox>
+                                                                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="590.0">
+                                                                     <children>
+                                                                        <Label prefHeight="50.0" prefWidth="170.0" text="Mobile:">
+                                                                           <font>
+                                                                              <Font size="18.0" />
+                                                                           </font>
+                                                                           <padding>
+                                                                              <Insets left="15.0" />
+                                                                           </padding>
+                                                                        </Label>
+                                                                        <Text fx:id="mobileText" strokeType="OUTSIDE" strokeWidth="0.0" text="..." textAlignment="CENTER" wrappingWidth="420.0">
+                                                                           <HBox.margin>
+                                                                              <Insets top="13.0" />
+                                                                           </HBox.margin>
+                                                                           <font>
+                                                                              <Font size="17.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                     </children>
+                                                                  </HBox>
+                                                                  <HBox layoutX="10.0" layoutY="60.0" prefHeight="50.0" prefWidth="590.0">
+                                                                     <children>
+                                                                        <Label prefHeight="50.0" prefWidth="170.0" text="Email:">
+                                                                           <font>
+                                                                              <Font size="18.0" />
+                                                                           </font>
+                                                                           <padding>
+                                                                              <Insets left="15.0" />
+                                                                           </padding>
+                                                                        </Label>
+                                                                        <Text fx:id="emailText" strokeType="OUTSIDE" strokeWidth="0.0" text="..." textAlignment="CENTER" wrappingWidth="420.0">
+                                                                           <HBox.margin>
+                                                                              <Insets top="13.0" />
+                                                                           </HBox.margin>
+                                                                           <font>
+                                                                              <Font size="17.0" />
+                                                                           </font>
+                                                                        </Text>
+                                                                     </children>
+                                                                     <VBox.margin>
+                                                                        <Insets bottom="33.0" />
+                                                                     </VBox.margin>
+                                                                  </HBox>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <JFXButton onAction="#handleIssue" prefHeight="44.0" prefWidth="100.0" styleClass="main-button" stylesheets="@color.css" text="ISSUE" textFill="WHITE">
+                                             <VBox.margin>
+                                                <Insets left="355.0" right="355.0" top="15.0" />
+                                             </VBox.margin>
+                                             <graphic>
+                                                <FontAwesomeIconView fill="WHITE" glyphName="CHECK_SQUARE" size="26" />
+                                             </graphic>
+                                             <font>
+                                                <Font name="System Bold" size="15.0" />
+                                             </font>
+                                          </JFXButton>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                      <Tab text="             RETURN             ">
+                        <content>
+                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <VBox layoutX="70.0" layoutY="54.0" prefHeight="611.0" prefWidth="810.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <HBox prefHeight="55.0" prefWidth="810.0">
+                                             <children>
+                                                <Label prefHeight="56.0" prefWidth="120.0" text="Enter User ID:">
+                                                   <font>
+                                                      <Font name="System Bold" size="16.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="20.0" />
+                                                   </HBox.margin>
+                                                </Label>
+                                                <TextField fx:id="userIdTextField2" alignment="CENTER" prefHeight="35.0" prefWidth="150.0" promptText="User id">
+                                                   <HBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </HBox.margin>
+                                                </TextField>
+                                             </children>
+                                          </HBox>
+                                          <VBox prefHeight="480.0" prefWidth="810.0">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="46.0" prefWidth="770.0" styleClass="top-main" text="LIST OF USERS BORROWING" textFill="WHITE">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="LIST_ALT" size="35" />
+                                                   </graphic>
+                                                </Label>
+                                                <TableView fx:id="tableView" prefHeight="434.0" prefWidth="770.0">
+                                                  <columns>
+                                                    <TableColumn fx:id="serialNumber" prefWidth="128.0" text="Stt" />
+                                                    <TableColumn fx:id="bookId" prefWidth="128.0" text="ID Book" />
+                                                      <TableColumn fx:id="title" prefWidth="128.0" text="Title" />
+                                                      <TableColumn fx:id="author" prefWidth="128.0" text="Author" />
+                                                      <!--<TableColumn prefWidth="96.0" text="SL Mượn" /> -->
+                                                      <TableColumn fx:id="borrowDate" prefWidth="128.0" text="Borrow Date" />
+                                                      <TableColumn fx:id="dueDate" prefWidth="128.0" text="Due Date" />
+                                                      <!--<TableColumn prefWidth="96.0" text="Status" /> -->
+                                                  </columns>
+                                                </TableView>
+                                             </children>
+                                             <VBox.margin>
+                                                <Insets left="20.0" right="20.0" />
+                                             </VBox.margin>
+                                          </VBox>
+                                          <HBox prefHeight="76.0" prefWidth="810.0">
+                                             <children>
+                                                <JFXButton fx:id="returnButton" alignment="CENTER" onAction="#returnHandle" prefHeight="44.0" prefWidth="126.0" styleClass="main-button" stylesheets="@color.css" text="RETURN" textFill="WHITE">
+                                                   <graphic>
+                                                      <FontAwesomeIconView fill="WHITE" glyphName="CHECK_CIRCLE" size="26" />
+                                                   </graphic>
+                                                   <font>
+                                                      <Font name="System Bold" size="15.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="342.0" top="15.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </AnchorPane>
+                        </content>
+                      </Tab>
+                    </tabs>
+                  </TabPane>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

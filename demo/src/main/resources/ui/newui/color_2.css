@@ -1,0 +1,30 @@
+.colorBackground {
+    -fx-background-color: linear-gradient(to right top, #fab04d, #fc5298);
+}
+
+.login-button:hover {
+    -fx-background-color: linear-gradient(to right top, #facd68, #fc76b3);
+}
+
+.custom-text-field:focused {
+    -fx-focus-color: linear-gradient(to right top, #fab04d, #fc5298);
+}
+
+.left-main {
+    -fx-background-color: linear-gradient(to right top, #facd68, #fc76b3);
+}
+
+.top-main {
+    -fx-background-color: linear-gradient(to top left , #facd68, #fc76b3);
+}
+
+.color-bookissue {
+    -fx-background-color: rgb(223, 230, 233);
+}
+
+.main-button {
+    -fx-background-color: linear-gradient(to top left , #facd68, #fc76b3);
+}
+.main-button:hover {
+    -fx-background-color: linear-gradient(to top left, #fab04d, #fc5298);
+}
